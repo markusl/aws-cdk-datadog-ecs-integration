@@ -1,0 +1,10 @@
+*.js
+*.d.ts
+tsconfig.json
+node_modules
+lerna-debug.log
+.vscode
+.jsii
+dist
+.npmignore
+coverage

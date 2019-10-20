@@ -1,0 +1,68 @@
+{
+  "name": "aws-cdk-datadog-ecs-integration",
+  "version": "0.1.0",
+  "description": "Datadog ECS integrations for Fargate and EC2 Task Definitions",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "jsii",
+    "watch": "jsii -w",
+    "package": "jsii-pacmak -v",
+    "test": "jest",
+    "lint": "tslint 'lib/**/*.ts{,x}'"
+  },
+  "jsii": {
+    "outdir": "dist"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testPathIgnorePatterns": [
+      ".d.ts"
+    ],
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "globals": {
+      "ts-jest": {
+        "diagnostics": {
+          "warnOnly": true
+        }
+      },
+      "testEnvironment": "node"
+    }
+  },
+  "dependencies": {
+    "@aws-cdk/aws-ecs": "^1.13.1",
+    "@aws-cdk/aws-ssm": "^1.13.1"
+  },
+  "peerDependencies": {
+    "@aws-cdk/core": "^1.13.1",
+    "@aws-cdk/aws-ecs": "^1.13.1",
+    "@aws-cdk/aws-ssm": "^1.13.1"
+  },
+  "author": {
+    "name": "Markus Lindqvist"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/markusl/aws-cdk-datadog-ecs-integration"
+  },
+  "devDependencies": {
+    "@aws-cdk/assert": "^1.13.1",
+    "@types/jest": "^24.0.19",
+    "jest": "^24.9.0",
+    "jsii": "^0.19.0",
+    "jsii-pacmak": "^0.19.0",
+    "ts-jest": "^24.1.0",
+    "tslint": "^5.20.0"
+  }
+}
