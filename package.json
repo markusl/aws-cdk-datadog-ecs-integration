@@ -1,6 +1,6 @@
 {
   "name": "aws-cdk-datadog-ecs-integration",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Datadog ECS integrations for Fargate and EC2 Task Definitions",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
