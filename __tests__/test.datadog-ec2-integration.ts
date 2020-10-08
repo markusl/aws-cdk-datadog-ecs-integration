@@ -6,7 +6,8 @@ import { DatadogEc2Integration } from '../lib';
 test('test datadog ec2 integration construct', () => {
 
   // GIVEN
-  const stack = new cdk.Stack();
+  const app = new cdk.App();
+  const stack = new cdk.Stack(app, 'test-stack');
   const taskDefinition = new ecs.TaskDefinition(stack, 'TaskDefinition', {
     compatibility: ecs.Compatibility.EC2,
     memoryMiB: '2048',
@@ -46,13 +47,13 @@ test('test datadog ec2 integration construct', () => {
           },
           {
             "ContainerPort": 8125,
-            "Protocol": "tcp"
+            "Protocol": "udp"
           }
         ]
       }
     ],
     "Cpu": "2048",
-    "Family": "TaskDefinition",
+    "Family": "teststackTaskDefinitionEBF974A5",
     "Memory": "2048",
     "NetworkMode": "bridge",
     "RequiresCompatibilities": [
