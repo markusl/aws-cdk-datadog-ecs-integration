@@ -37,7 +37,7 @@ export class DatadogFargateIntegration extends cdk.Construct {
 
     datadog.addPortMappings({
       containerPort: 8125,
-      protocol: ecs.Protocol.TCP,
+      protocol: ecs.Protocol.UDP,
     });
   }
 }

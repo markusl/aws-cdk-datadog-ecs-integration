@@ -37,7 +37,7 @@ export class DatadogEc2Integration extends cdk.Construct {
 
     datadog.addPortMappings({
       containerPort: 8125,
-      protocol: ecs.Protocol.TCP,
+      protocol: ecs.Protocol.UDP,
     });
   }
 }
